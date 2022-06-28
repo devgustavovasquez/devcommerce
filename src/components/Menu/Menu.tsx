@@ -37,3 +37,4 @@ export const Menu: React.FC<Props> = ({ setModal, handleHasAccount }) => {
     </nav>
   );
 };
+
