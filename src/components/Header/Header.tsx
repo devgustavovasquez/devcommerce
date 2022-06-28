@@ -12,7 +12,7 @@ type Props = {
 export const Header: React.FC<Props> = ({ setModal, handleHasAccount }) => {
   return (
     <header className="max-h-22 py-2 flex justify-center bg-zinc-200">
-      <div className="max-w-7xl w-full relative flex justify-between items-center">
+      <div className="max-w-7xl w-11/12 relative flex justify-between items-center">
         <Link to="/">
           <img className="max-w-xs w-8/12" src={LogoImg} alt="logo" />
         </Link>
