@@ -9,9 +9,6 @@ type Props = {
   hasAccount: boolean;
 };
 
-const GOOOGLE__ID =
-  '559808093542-46inddin77vmcmgtctc559e62bpnotgk.apps.googleusercontent.com';
-
 export const Modal: React.FC<Props> = ({
   setModal,
   handleHasAccount,
@@ -32,7 +29,7 @@ export const Modal: React.FC<Props> = ({
   useEffect(() => {
     const start = () => {
       gapi.client.init({
-        clientId: GOOOGLE__ID,
+        clientId: process.env.REACT_APP_GOOOGLE_ID,
         scope: ""
       })
     }

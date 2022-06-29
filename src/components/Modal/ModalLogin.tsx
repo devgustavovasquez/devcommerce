@@ -1,17 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   GoogleLogin,
   GoogleLoginResponse,
   GoogleLoginResponseOffline,
 } from 'react-google-login';
-import { gapi } from 'gapi-script';
 import { Form } from '@unform/web';
 import { X } from 'phosphor-react';
 import WebShoppingImg from '../../assets/web-shopping.svg';
 import { Input } from '../Form';
-
-const GOOOGLE__ID =
-  '559808093542-46inddin77vmcmgtctc559e62bpnotgk.apps.googleusercontent.com';
 
 type Props = {
   setModal: () => void;
@@ -52,7 +48,7 @@ export const ModalLogin: React.FC<Props> = ({ setModal, handleHasAccount }) => {
 
         <div className="flex flex-col gap-2">
           <GoogleLogin
-            clientId={GOOOGLE__ID}
+            clientId={process.env.REACT_APP_GOOOGLE_ID!}
             buttonText="Entrar com o Google"
             onSuccess={onSuccess}
             onFailure={onFailure}

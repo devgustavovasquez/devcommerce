@@ -10,10 +10,6 @@ type Props = {
   handleHasAccount: (state: boolean) => void;
 };
 
-const GOOOGLE__ID =
-  '559808093542-46inddin77vmcmgtctc559e62bpnotgk.apps.googleusercontent.com';
-
-
 export const ModalRegister: React.FC<Props> = ({
   setModal,
   handleHasAccount,
@@ -52,7 +48,7 @@ export const ModalRegister: React.FC<Props> = ({
         </div>
         <div className="flex flex-col gap-2">
           <GoogleLogin
-            clientId={GOOOGLE__ID}
+            clientId={process.env.REACT_APP_GOOOGLE_ID!}
             buttonText="Entrar com o Google"
             onSuccess={onSuccess}
             onFailure={onFailure}
